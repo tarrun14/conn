@@ -1,0 +1,256 @@
+.post-card {
+  background: var(--surface);
+  color: var(--ink);
+  padding: 24px;
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+  box-shadow: var(--shadow);
+  border: 1.5px solid var(--border);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(26,22,18,0.08);
+}
+
+/* HEADER */
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  background: var(--bg);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  font-size: 1.1rem;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+
+/* FOLLOW BUTTON */
+.follow-btn {
+  background: transparent;
+  border: 1.5px solid var(--accent);
+  padding: 6px 14px;
+  color: var(--accent);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all var(--transition);
+  font-size: 0.85rem;
+}
+
+.follow-btn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* CONTENT */
+.post-content {
+  margin-top: 16px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink);
+  font-weight: 300;
+}
+
+/* TAGS */
+.post-tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.post-tag {
+  background: var(--bg);
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  color: var(--ink-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* IMAGE */
+.post-image-container {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin-top: 16px;
+  padding-bottom: 8px; /* For scrollbar */
+}
+
+.post-image-container img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.post-image-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.post-image-container::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+/* ACTIONS */
+.post-actions {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.like-btn {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: var(--ink);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all var(--transition);
+}
+
+.like-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(200,68,26,0.05);
+}
+
+/* COMMENTS */
+.view-comments-btn {
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  margin-top: 16px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color var(--transition);
+}
+
+.view-comments-btn:hover {
+  color: var(--accent);
+}
+
+.comments-container {
+  max-height: 140px;
+  overflow-y: auto;
+  background: var(--bg);
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-top: 12px;
+  border: 1px solid var(--border);
+}
+
+.comment-item {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.comment-item:last-child {
+  border-bottom: none;
+}
+
+.comment-item span.comment-user {
+  font-weight: 600;
+  color: var(--accent);
+  margin-right: 4px;
+}
+
+/* SCROLLBAR */
+.comments-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.comments-container::-webkit-scrollbar-thumb {
+  background: #d4cec4;
+  border-radius: 10px;
+}
+
+/* COMMENT BOX */
+.comment-box {
+  display: flex;
+  margin-top: 12px;
+  gap: 8px;
+}
+
+.comment-box input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  background: var(--bg);
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: border-color var(--transition);
+  outline: none;
+}
+
+.comment-box input:focus {
+  border-color: var(--accent);
+}
+
+.comment-box button {
+  padding: 0 16px;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.comment-box button:hover {
+  background: var(--accent-hover);
+}
+
+.delete-btn {
+  background: transparent;
+  color: var(--ink-muted);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 0.85rem;
+  transition: color var(--transition);
+}
+
+.delete-btn:hover {
+  color: #d9363e;
+}

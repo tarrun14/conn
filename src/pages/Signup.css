@@ -1,0 +1,145 @@
+/* =========================
+   PAGE BACKGROUND
+========================= */
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6c63ff, #4facfe);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* =========================
+   CARD
+========================= */
+.login-card {
+  width: 380px;
+  padding: 30px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Animation */
+.animate-slideUp {
+  animation: slideUp 0.6s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   HEADER
+========================= */
+.login-header h1 {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.login-header p {
+  color: #777;
+  font-size: 14px;
+}
+
+/* =========================
+   FORM
+========================= */
+.login-form {
+  margin-top: 15px;
+}
+
+/* Input group */
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+/* Focus effect */
+.input-group:focus-within {
+  border-color: #6c63ff;
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.3);
+}
+
+.input-icon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6c63ff, #7f53ac);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   MESSAGE
+========================= */
+.login-card p {
+  font-size: 14px;
+}
+
+/* =========================
+   SIGNUP LINK
+========================= */
+.signup-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 400px) {
+  .login-card {
+    width: 90%;
+    padding: 20px;
+  }
+}
